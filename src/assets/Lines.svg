@@ -1,0 +1,26 @@
+<svg width="1920" height="1169" viewBox="0 0 1920 1169" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.15" clip-path="url(#clip0_876_8068)">
+<path d="M85 1398.5L85 -229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M335 1398.5L335 -229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M585 1398.5L585 -229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M835 1398.5L835 -229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1085 1398.5V-229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1335 1398.5V-229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1585 1398.5V-229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1835 1398.5V-229.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g opacity="0.15" clip-path="url(#clip1_876_8068)">
+<path d="M1774 1084.5L146 1084.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1774 834.5L146 834.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1774 584.5L146 584.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+<path d="M1774 334.5L146 334.5" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_876_8068">
+<rect width="1920" height="1169" fill="white"/>
+</clipPath>
+<clipPath id="clip1_876_8068">
+<rect width="1169" height="1920" fill="white" transform="matrix(0 -1 1 0 0 1169)"/>
+</clipPath>
+</defs>
+</svg>
