@@ -3,6 +3,10 @@ import Navbar from '../Navbar/Navbar'
 import HeroComponent from '../Components/HeroComponent'
 // import  style from "./udg-index.module.css";
 import AboutUsCard from './AboutUsCard';
+import KimshukaImg from '../../assets/flwrLogo.svg';
+import FAQ from '../Components/FAQ';
+import CTABanner from '../Components/CTABanner';
+import OurClients from './OurClients';
 import AboutUsHdng from './AboutUsHdng';
 import OurServicesSection from '../Components/OurServicesSection';
 import TestimonialsSlider from '../Components/TestimonialsSlider';
@@ -10,7 +14,6 @@ import TestimonialsSlider from '../Components/TestimonialsSlider';
 
 const HomePage = () => {
 
-   
 
   return (
 
@@ -51,7 +54,10 @@ const HomePage = () => {
       text='Delivered 30+ projects over 10 years with consistent results'
       />
     </div>
-
+    <OurClients/>
+    <FAQ/>
+    <CTABanner/>
+   
     <AboutUsHdng
     OrngHdng='Our Services'
     PrimaryHdng='How We Help You Succeed'
@@ -60,13 +66,13 @@ const HomePage = () => {
     />
 
   <OurServicesSection/>
-<div className='py-18 w-[100%] px-10 bg-blue-300'>
-<TestimonialsSlider/>
-</div>
+    <div className='py-18 w-[100%] px-10 bg-blue-300'>
+    <TestimonialsSlider/>
+    </div>
    
   </div>
-</div>
+  </div>
   )
 }
 
-export default HomePage
+export default HomePage;
