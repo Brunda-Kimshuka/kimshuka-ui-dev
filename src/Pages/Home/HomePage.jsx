@@ -11,7 +11,10 @@ import OurClients from './OurClients';
 const HomePage = () => {
   return (
 
-   
+   <div className={ ` w-full h-full flex flex-col`}>
+   <div className="fixed top-0 left-0 w-full z-10">
+     <Navbar />
+   </div>
 
   <div className="pt-[64px] flex-1 overflow-y-auto flex items-center flex-col">
     <HeroComponent />
@@ -30,6 +33,7 @@ const HomePage = () => {
     <FAQ/>
     <CTABanner/>
    
+  </div>
   </div>
 
   )
