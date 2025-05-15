@@ -1,11 +1,34 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import HeroComponent from '../Components/HeroComponent'
-// import  style from "./udg-index.module.css";
+import  style from "./udg-index.module.css";
 import AboutUsCard from './AboutUsCard';
-import KimshukaImg from '../../assets/flwrLogo.svg';
+import AboutUsHdng from './AboutUsHdng';
+import OurServicesCard from '../Components/OurServicesCard';
+import { useRef, useEffect } from "react";
+
 
 const HomePage = () => {
+
+    const scrollRef = useRef(null);
+
+    useEffect(() => {
+    const el = scrollRef.current;
+
+    const handleWheel = (e) => {
+      if (el && e.deltaY !== 0) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+      }
+    };
+
+    el?.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      el?.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
 
    
@@ -13,16 +36,54 @@ const HomePage = () => {
   <div className="pt-[64px] flex-1 overflow-y-auto flex items-center flex-col">
     <HeroComponent />
     
-    <div className="flex flex-col gap-4 justify-center items-center py-8 text-center">
-      <div className="flex gap-2">
-        <img className=" " src={KimshukaImg}/>
-        <h2 className="text-[#F27F0C] text-lg">About Us</h2>
-      </div>
-      <h2 className="text-[48px] font-medium">Lorem ipsum dolor sit amet.</h2>
-      <p className="text-[24px] font-normal">
-        Lorem ipsum dolor sit amet consectetur. Tempus <br /> varius pulvinar elit rutrum.
-      </p>
+    <AboutUsHdng
+    OrngHdng='Your success, our mission'
+    PrimaryHdng='Why Kimshuka?'
+    PyrA='Driven by product thinking, we design, deploy, and deliver premium solutions'
+    PyrB='that don’t just satisfy clients-they inspire lasting partnerships.'
+    />
+    
+    <div className='bg-pink grid grid-cols-12 gap-6 w-[70%] pt-10 pb-16'>
+      <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
+       <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
+       <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
+       <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
     </div>
+
+    <AboutUsHdng
+    OrngHdng='Our Services'
+    PrimaryHdng='How We Help You Succeed'
+    PyrA='Our services are designed to meet your exact needs and support '
+    PyrB='your long term vision.'
+    />
+
+  <div className={`${style["no-Scrollbar"]}  w-full overflow-x-auto py-20 px-8`} ref={scrollRef}>
+    <div className={` flex gap-4  w-max`}>
+      <OurServicesCard />
+      <OurServicesCard />
+      <OurServicesCard />
+      <OurServicesCard />
+      <OurServicesCard />
+      <OurServicesCard />
+    </div>
+   </div>
+
    
   </div>
 

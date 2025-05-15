@@ -1,22 +1,36 @@
 import React from 'react'
+import style from './udg-index.module.css'
+import FrameT from '../../assets/Frametop.svg'
+import { useState } from "react";
 
-// export interface AboutUsProps
-//   extends React.InputHTMLAttributes<HTMLInputElement> {
-//     flexStyle? : string;
-// }
 
-const AboutUsCard = () => {
+const AboutUsCard = ({ headingA,headingB, text }) => {
+
+ const [isHovered, setIsHovered] = useState(false);
 
   return (
-      <div className='flex gap-4 border-[1px] border-[#D0D5DD] rounded-2xl py-10 px-8'>
-        <div className='flex flex-col gap-4 w-[65%] justify-center'>
-          <h2 className='font-medium text-start text-[32px]'>Lorem ipsum dolor sit amet.</h2>
-          <p className='w-[85%] text-[24px] text-start font-normal text-[#667085]'>At Kimshuka Technologies, we turn your vision into reality with tailored software development solutions. As a leading tech partner, we pride ourselves on delivering innovative software that meets end-user needs with a focus on quality, usability and cutting edge technology.</p>
-        </div>
-        <div className='w-[35%] h-[400px] bg-blue-300 p-20'>
-          <img src='' className=''/>
-        </div>
+
+     <div className={`relative bg-[#f5f2f262] border-[1px] border-[#D0D5DD] rounded-2xl col-span-6 p-14 text-center overflow-hidden transition-all duration-300 hover:bg-[#FCFAFA]`}  onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
+{isHovered ? (
+    < >   
+      <div className='absolute top-0 right-0 '>
+        <div className='w-18 h-18 rounded-bl-full'><img src={FrameT} className='w-full h-full'/>  </div>
       </div>
+
+        <h2 className={`${style['PrimaryFont']} text-[28px] text-[#0A0A0A] font-medium`}>{ headingA}<br/>{headingB}</h2>
+        <p className={`${style['SecondaryFont']} text-[24px] text-[#667085] font-normal`}>{text}</p>
+       
+       <div className='absolute bottom-0 left-0 rotate-180 '>
+        <div className='w-18 h-18 rounded-tr-full'><img src={FrameT} className='w-full h-full'/>  </div>
+      </div>
+    </> ) : (
+    <>
+     <h2 className={`${style['PrimaryFont']} text-[28px] text-[#716e6e] font-medium`}>{ headingA}<br/>{headingB} </h2>
+        <p className={`${style['SecondaryFont']} text-[24px] text-[#9e9e9f] font-normal`}>{text}</p>
+    </>
+    )}
+    </div>
   )
 }
 
