@@ -5,7 +5,7 @@ import KimshukaImg from '../../assets/flwrLogo.svg';
 
 const HeroComponent = () => {
   return (
-    <div className='w-full h-full justify-center items-center text-center py-[12%] '   
+    <div className='w-full h-full justify-center items-center text-center py-[10%] '   
     style={{
     backgroundImage: `url(${BgImg})`,
     backgroundRepeat: 'no-repeat',
