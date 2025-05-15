@@ -38,10 +38,10 @@ const FAQ = () => {
   return (
     <div className="flex gap-20 py-[5%] w-[95%]">
       <div className="px-10">
-        <h1 className="font-bold text-4xl">
+        <h1 className="font-bold text-4xl text-[#0A0A0A]">
           Frequent <br /> Questions and Answer
         </h1>
-        <h4>
+        <h4 className="text-[#667085]">
           Have another questions? Email us at{" "}
           <a href={`mailto:${email}`} className="text-[#F27F0C]">
             {email}
@@ -68,12 +68,12 @@ function FAQItem({faqItem}){
   return(
     <li key={id}>
       <div className="flex gap-4 items-center justify-between">
-        <h2>{question}</h2>
+        <h2 className="text-[#0A0A0A]">{question}</h2>
         <button onClick={toggleAnswer} className="h-6 w-6 bg-[#F27F0C] rounded-full text-white ">
           {isAnswerVisible?<img src="src/assets/minus-sign.svg" alt="minus"/>: <img src="src/assets/plus-sign.svg" alt="plus"/>}
         </button>
       </div>
-      {isAnswerVisible && <p className="text-xs px-[18px] py-[5px]">{answer}</p>}
+      {isAnswerVisible && <p className="text-xs px-[18px] py-[5px] text-[#667085]">{answer}</p>}
       <hr className="border-gray-300 my-4" />
     </li>
   )

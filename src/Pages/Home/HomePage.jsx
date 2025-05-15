@@ -6,6 +6,7 @@ import AboutUsCard from './AboutUsCard';
 import KimshukaImg from '../../assets/flwrLogo.svg';
 import FAQ from '../Components/FAQ';
 import CTABanner from '../Components/CTABanner';
+import OurClients from './OurClients';
 
 const HomePage = () => {
   return (
@@ -25,7 +26,7 @@ const HomePage = () => {
         Lorem ipsum dolor sit amet consectetur. Tempus <br /> varius pulvinar elit rutrum.
       </p>
     </div>
-
+    <OurClients/>
     <FAQ/>
     <CTABanner/>
    
