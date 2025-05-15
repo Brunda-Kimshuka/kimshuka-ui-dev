@@ -13,10 +13,7 @@ function App() {
   return (
 
 <Router>
- <div className={ ` w-full h-full flex flex-col`}>
-   <div className="fixed top-0 left-0 w-full z-10">
-     <Navbar />
-   </div>
+ 
     <Routes>
         <Route path="/" element={<HomePage />} />
 
@@ -26,7 +23,7 @@ function App() {
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
     </Routes>
-</div>  
+
 </Router>
   )
 }
