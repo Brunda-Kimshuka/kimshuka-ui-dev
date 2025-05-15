@@ -7,8 +7,14 @@ import KimshukaImg from '../../assets/flwrLogo.svg';
 import FAQ from '../Components/FAQ';
 import CTABanner from '../Components/CTABanner';
 import OurClients from './OurClients';
+import AboutUsHdng from './AboutUsHdng';
+import OurServicesSection from '../Components/OurServicesSection';
+import TestimonialsSlider from '../Components/TestimonialsSlider';
+
 
 const HomePage = () => {
+
+
   return (
 
    <div className={ ` w-full h-full flex flex-col`}>
@@ -19,24 +25,54 @@ const HomePage = () => {
   <div className="pt-[64px] flex-1 overflow-y-auto flex items-center flex-col">
     <HeroComponent />
     
-    <div className="flex flex-col gap-4 justify-center items-center py-8 text-center">
-      <div className="flex gap-2">
-        <img className=" " src={KimshukaImg}/>
-        <h2 className="text-[#F27F0C] text-lg">About Us</h2>
-      </div>
-      <h2 className="text-[48px] font-medium">Lorem ipsum dolor sit amet.</h2>
-      <p className="text-[24px] font-normal">
-        Lorem ipsum dolor sit amet consectetur. Tempus <br /> varius pulvinar elit rutrum.
-      </p>
+    <AboutUsHdng
+    OrngHdng='Your success, our mission'
+    PrimaryHdng='Why Kimshuka?'
+    PyrA='Driven by product thinking, we design, deploy, and deliver premium solutions'
+    PyrB='that don’t just satisfy clients-they inspire lasting partnerships.'
+    />
+    
+    <div className='bg-pink grid grid-cols-12 gap-6 w-[70%] pt-10 pb-16'>
+      <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
+       <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
+       <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
+       <AboutUsCard
+      headingA = '10 Years of '
+      headingB = 'Engineering Excellence'
+      text='Delivered 30+ projects over 10 years with consistent results'
+      />
     </div>
     <OurClients/>
     <FAQ/>
     <CTABanner/>
    
-  </div>
-  </div>
+    <AboutUsHdng
+    OrngHdng='Our Services'
+    PrimaryHdng='How We Help You Succeed'
+    PyrA='Our services are designed to meet your exact needs and support '
+    PyrB='your long term vision.'
+    />
 
+  <OurServicesSection/>
+    <div className='py-18 w-[100%] px-10 bg-blue-300'>
+    <TestimonialsSlider/>
+    </div>
+   
+  </div>
+  </div>
   )
 }
 
-export default HomePage
+export default HomePage;
