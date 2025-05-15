@@ -4,6 +4,8 @@ import HeroComponent from '../Components/HeroComponent'
 // import  style from "./udg-index.module.css";
 import AboutUsCard from './AboutUsCard';
 import KimshukaImg from '../../assets/flwrLogo.svg';
+import FAQ from '../Components/FAQ';
+import CTABanner from '../Components/CTABanner';
 
 const HomePage = () => {
   return (
@@ -23,6 +25,9 @@ const HomePage = () => {
         Lorem ipsum dolor sit amet consectetur. Tempus <br /> varius pulvinar elit rutrum.
       </p>
     </div>
+
+    <FAQ/>
+    <CTABanner/>
    
   </div>
 
