@@ -54,9 +54,6 @@ const HomePage = () => {
       text='Delivered 30+ projects over 10 years with consistent results'
       />
     </div>
-    <OurClients/>
-    <FAQ/>
-    <CTABanner/>
    
     <AboutUsHdng
     OrngHdng='Our Services'
@@ -65,10 +62,16 @@ const HomePage = () => {
     PyrB='your long term vision.'
     />
 
-  <OurServicesSection/>
-    <div className='py-18 w-[100%] px-10 bg-blue-300'>
+    <OurServicesSection/>
+    
+    <OurClients/>
+    <div className='py-18 w-[100%] px-[6%]'>
     <TestimonialsSlider/>
     </div>
+
+    <FAQ/>
+
+    <CTABanner/>
    
   </div>
   </div>

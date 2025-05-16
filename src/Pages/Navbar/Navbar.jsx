@@ -51,8 +51,8 @@ const Navbar = () => {
       </div>
 
       <div className=' gap-4 flex items-center'>
-        <div className='bg-blue-300 w-16 h-16 border rounded-full'><img/></div>
-        <div className='flex py-2 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full'>
+        <div className='bg-blue-300 w-12 h-12 border rounded-full'><img/></div>
+        <div className='flex py-1 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full'>
             <h4>Get Started</h4>
             <div className='bg-[#F27F0C] p-1 rounded-full w-8 h-8 justify-center items-center'>
                 <img src={Arrow}/>

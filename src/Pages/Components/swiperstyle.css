@@ -1,0 +1,15 @@
+
+
+.testimonial-swiper .swiper-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+  filter: blur(1px);
+}
+
+/* Active (centered) slide is fully visible */
+.testimonial-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+}
