@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/Kimshuka-Logo.svg';
 import Arrow from '../../assets/ArrowUpRight.svg';
 import ArrowDwn from '../../assets/CaretDown.svg';
-
+import Arrowrignt from '../../assets/ArrowRight.svg';
 
 
 const Navbar = () => {
@@ -52,10 +52,11 @@ const Navbar = () => {
 
       <div className=' gap-4 flex items-center'>
         <div className='bg-blue-300 w-12 h-12 border rounded-full'><img/></div>
-        <div className='flex py-1 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full'>
+        <div className='flex py-2 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
             <h4>Get Started</h4>
-            <div className='bg-[#F27F0C] p-1 rounded-full w-8 h-8 justify-center items-center'>
-                <img src={Arrow}/>
+            <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>
+                <img src={Arrow} className='group-hover:hidden'/>
+                <img src={Arrowrignt} className=' hidden group-hover:block'/>               
             </div>
         </div>
       </div>

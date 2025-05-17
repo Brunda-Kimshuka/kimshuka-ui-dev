@@ -3,7 +3,7 @@ import Arrow from '../../assets/ArrowUpRight.svg';
 import Arrowrignt from '../../assets/ArrowRight.svg';
 const CTABanner = () => {
   return (
-    <div className='h-[400px] w-[95%] bg-[#E9E9E9] space-y-4 rounded-2xl flex flex-col items-center justify-center border-gray-300 border-1'>
+    <div className='h-[400px] w-[95%] bg-[#E9E9E9] space-y-4 rounded-2xl flex flex-col items-center justify-center border-gray-300 border-1 my-8'>
             <h1 className='font-bold text-3xl'>Let's Talk About Your Next Move</h1>
             <h4>Big plans? Let's bring them to life together</h4>
             <button className='relative group text-[#FFFFFF] bg-[#1B1B1D] hover:bg-[#F27F0C] flex w-[181px] h-[48px] rounded-[32px] items-center justify-center gap-2'>Get In Touch

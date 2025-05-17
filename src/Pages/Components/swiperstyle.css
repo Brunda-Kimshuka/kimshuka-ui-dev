@@ -4,7 +4,7 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.5;
   transform: scale(0.9);
-  filter: blur(1px);
+  /* filter: blur(1px); */
 }
 
 /* Active (centered) slide is fully visible */
