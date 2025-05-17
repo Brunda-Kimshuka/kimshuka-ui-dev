@@ -4,12 +4,9 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/Kimshuka-Logo.svg';
 import Arrow from '../../assets/ArrowUpRight.svg';
 import ArrowDwn from '../../assets/CaretDown.svg';
-<<<<<<< HEAD
 import DropDown from '../Services/DropDown';
 
-=======
 import Arrowrignt from '../../assets/ArrowRight.svg';
->>>>>>> 24c95d7546d125f06fa0bcfed23fe690ec5e33cf
 
 
 const Navbar = () => {
@@ -55,6 +52,7 @@ const Navbar = () => {
          <h2>Services</h2>
          {isVisible && <DropDown/>}
         </Link>
+        
           <div className='w-4 h-4'>
             <img src={ArrowDwn} onClick={handleOnClick} aria-haspopup="true"
             aria-expanded={isVisible}/>{isVisible && <DropDown/>}
