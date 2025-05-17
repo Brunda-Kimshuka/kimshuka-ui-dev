@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
+import style from './udg-style.module.css'
 
 const faqData = [
   {
@@ -33,15 +34,19 @@ const faqData = [
   },
 ];
 const FAQ = () => {
+  const [visibleAnswer, setVisibleAnswer] = useState(null);
   const email = "info@kimshuka.com";
+  const handleToggleAnswer = (itemId) => {
+    setVisibleAnswer((prevId) => (prevId === itemId ? null : itemId));
+  };
 
   return (
-    <div className="flex gap-20 py-[5%] w-[95%]">
-      <div className="px-10">
-        <h1 className="font-bold text-4xl text-[#0A0A0A]">
+    <div className="flex gap-20 py-[5%] w-[100%] items-center justify-center">
+      <div>
+        <h1 className={`${style['PrimaryFont']} text-[40px] text-[#0A0A0A] font-bold `}>
           Frequent <br /> Questions and Answer
         </h1>
-        <h4 className="text-[#667085]">
+        <h4 className={`${style['SecondaryFont']} text-[16px] text-[#667085] font-normal`}>
           Have another questions? Email us at{" "}
           <a href={`mailto:${email}`} className="text-[#F27F0C]">
             {email}
@@ -51,7 +56,12 @@ const FAQ = () => {
       <div className="w-[50%]">
         <ul>
           {faqData.map((faqItem)=>(
-            <FAQItem key={faqItem.id} faqItem={faqItem}/>
+            <FAQItem 
+              key={faqItem.id} 
+              faqItem={faqItem}
+              isVisible={visibleAnswer === faqItem.id}
+              onToggle={handleToggleAnswer}
+            />
           ))}
         </ul>
       </div>
@@ -59,24 +69,30 @@ const FAQ = () => {
   );
 };
 
-function FAQItem({faqItem}){
-  const [isAnswerVisible, setIsAnswerVisible] = useState(false);
-  const { id, question, answer } = faqItem
-  const toggleAnswer = (id) => {
-    setIsAnswerVisible(!isAnswerVisible);
-  };
-  return(
+function FAQItem({ faqItem, isVisible, onToggle }) {
+  const { id, question, answer } = faqItem;
+
+  return (
     <li key={id}>
       <div className="flex gap-4 items-center justify-between">
-        <h2 className="text-[#0A0A0A]">{question}</h2>
-        <button onClick={toggleAnswer} className="h-6 w-6 bg-[#F27F0C] rounded-full text-white ">
-          {isAnswerVisible?<img src="src/assets/minus-sign.svg" alt="minus"/>: <img src="src/assets/plus-sign.svg" alt="plus"/>}
+        <h2 className={`${style['PrimaryFont']} text-[24px] text-[#0A0A0A] font-medium `}>{question}</h2>
+        <button
+          onClick={()=>onToggle(id)}
+          className="h-6 w-6 bg-[#F27F0C] rounded-full text-white "
+        >
+          {isVisible ? (
+            <img src="src/assets/minus-sign.svg" alt="minus" />
+          ) : (
+            <img src="src/assets/plus-sign.svg" alt="plus" />
+          )}
         </button>
       </div>
-      {isAnswerVisible && <p className="text-xs px-[18px] py-[5px] text-[#667085]">{answer}</p>}
-      <hr className="border-gray-300 my-4" />
+      {isVisible && (
+        <p className={`${style['SecondaryFont']} text-[18px] text-[#667085] font-normal`}>{answer}</p>
+      )}
+      <hr className="border-[#D0D5DD] my-4" />
     </li>
-  )
+  );
 }
 
 

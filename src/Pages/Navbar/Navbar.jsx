@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/Kimshuka-Logo.svg';
 import Arrow from '../../assets/ArrowUpRight.svg';
 import ArrowDwn from '../../assets/CaretDown.svg';
+import DropDown from '../Services/DropDown';
+
 import Arrowrignt from '../../assets/ArrowRight.svg';
 
 
 const Navbar = () => {
   const location = useLocation();
+  const [isVisible, setIsVisible]=useState(false)
+  
+  
+  const handleHoverEnter = () => {
+    setIsVisible(true);
+  }
+  const handleHoverLeave = () => {
+    setIsVisible(false)
+  }
+  const handleOnClick= () => {
+    setIsVisible(!isVisible)
+  }
+
 
   const getTabName = (path) => {
     const last = path.split('/').pop();
@@ -33,10 +48,15 @@ const Navbar = () => {
           Home
         </Link>
 
-        <Link className={`flex gap-2 items-center ${activeTab === 'services' ? 'text-[#F27F0C]' : 'text-[#667085]'}`} to="/services">
+        <Link className={`flex gap-2 items-center ${activeTab === 'services' ? 'text-[#F27F0C]' : 'text-[#667085]'}`} to="/services" onMouseEnter={handleHoverEnter} onMouseLeave={handleHoverLeave}>
          <h2>Services</h2>
-         <div className='w-4 h-4'><img src={ArrowDwn}/></div>
+         {isVisible && <DropDown/>}
         </Link>
+        
+          <div className='w-4 h-4'>
+            <img src={ArrowDwn} onClick={handleOnClick} aria-haspopup="true"
+            aria-expanded={isVisible}/>{isVisible && <DropDown/>}
+          </div>
 
         <Link to="/about"
           className={`${activeTab === 'about' ? 'text-[#F27F0C]' : 'text-[#667085]'}`}>About Us</Link>

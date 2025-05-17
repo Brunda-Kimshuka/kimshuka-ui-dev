@@ -10,7 +10,7 @@ const AboutUsHdng = ({OrngHdng, PrimaryHdng, PyrA, PyrB}) => {
         <h2 className="text-[#F27F0C] text-lg">{OrngHdng}</h2>
       </div>
       <h2 className="text-[48px] font-medium">{PrimaryHdng}</h2>
-      <p className="text-[24px] font-normal">
+      <p className="text-[24px] font-normal text-[#667085]">
         {PyrA}<br /> {PyrB}
       </p>
     </div>

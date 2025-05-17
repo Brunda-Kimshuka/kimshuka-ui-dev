@@ -1,18 +1,14 @@
 import React from 'react'
-
+import AboutUsHdng from './AboutUsHdng'
 const OurClients = () => {
   return (
     <div>
-        <div className='flex flex-col items-center justify-center space-y-2'>
-            <div className='flex items-center justify-center gap-2'>
-                <img src="src/assets/Group.svg" alt="" />
-                <h2 className='text-[#F27F0C]'>Big wins, thanks to</h2>
-            </div>
-            <div className='flex flex-col items-center justify-center w-[600px] space-y-2'>
-                <h1 className='font-bold text-3xl text-[#0A0A0A]'>OUR CLIENTS</h1>
-                <p className='text-center text-[#667085]'>We've partnered with businesses across industries to deliver tailored solutions, streamline digital operations, and modernize tech stacks.</p>
-            </div>
-        </div>
+        <AboutUsHdng
+            OrngHdng='Big wins, thanks to'
+            PrimaryHdng='Our Clients'
+            PyrA="We've partnered with businesses across industries to deliver tailored solutions,"
+            PyrB='streamline digital operations, and modernize tech stacks.'
+        />
         <div className='grid grid-cols-4 grid-rows-2 w-[1000px] h-[400px] pt-12 pb-12'>
             <div className='relative'>
                 <img src="src/assets/image 7.svg" alt="tenxerlabs" />
