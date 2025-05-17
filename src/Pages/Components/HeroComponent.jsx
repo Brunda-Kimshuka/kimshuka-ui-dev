@@ -1,6 +1,8 @@
 import React from 'react'
 import BgImg from '../../assets/Lines.svg';
 import KimshukaImg from '../../assets/flwrLogo.svg';
+import Arrowrignt from '../../assets/ArrowRight.svg';
+import Arrow from '../../assets/ArrowUpRight.svg';
 import { useState } from "react";
 
 
@@ -8,7 +10,7 @@ const HeroComponent = () => {
    const [isHovered, setIsHovered] = useState(false);
   
   return (
-    <div className='w-full h-full justify-center items-center text-center py-[10%] '   
+    <div className='w-full h-full justify-center items-center text-center pt-[5%] pb-[10%] '   
     style={{
     backgroundImage: `url(${BgImg})`,
     backgroundRepeat: 'no-repeat',
@@ -27,10 +29,10 @@ const HeroComponent = () => {
                                                            onMouseLeave={() => setIsHovered(false)}>
    {!isHovered ? (<button className='flex gap-4 bg-[#1B1B1D] px-4 py-2 text-[#FCFAFA] items-center rounded-full'> 
               <h2 className='text-lg'>Explore Services</h2>
-              <div className='w-10 h-10 bg-[#F27F0C] rounded-full'><img/></div>
+              <div className='w-8 h-8 bg-[#F27F0C] rounded-full flex justify-center items-center'><img src={Arrow}/></div>
             </button>) : (<button className='flex gap-4 bg-[#F27F0C] px-4 py-2 text-[#FCFAFA] items-center rounded-full'> 
               <h2 className='text-lg'>Explore Services</h2>
-              <div className='w-10 h-10 bg-[#F27F0C]'><img/></div>
+              <div className='w-8 h-8 bg-[#F27F0C] flex justify-center items-center'><img src={Arrowrignt}/></div>
             </button>)}
           </div>  
           </div>

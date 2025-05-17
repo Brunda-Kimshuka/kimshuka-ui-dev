@@ -1,10 +1,14 @@
 import React from 'react'
+import Navbar from '../Navbar/Navbar'
+
 
 const Services = () => {
   return (
-    <div className='flex justify-center items-center w-full h-full mt-[10%]'>
-      <h2 className='text-9xl text-green-700'>Services</h2>
-    </div>
+     <div className={ ` w-full h-full flex flex-col  `}>
+   <div className="fixed top-0 left-0 w-full z-20">
+     <Navbar />
+   </div>
+   </div>
   )
 }
 

@@ -23,22 +23,4 @@
     display: none; }
 
 
-/* Default style for all slides */
-.testimonial-swiper .swiper-slide {
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  opacity: 0.5;
-  transform: scale(0.9);
-}
 
-/* Active (centered) slide */
-.testimonial-swiper .swiper-slide-active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Optional: slightly increase size of prev/next for better look */
-.testimonial-swiper .swiper-slide-prev,
-.testimonial-swiper .swiper-slide-next {
-  opacity: 0.5;
-  transform: scale(0.95);
-}
