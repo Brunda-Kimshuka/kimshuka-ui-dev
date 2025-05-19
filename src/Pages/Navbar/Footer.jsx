@@ -1,6 +1,9 @@
 import React from 'react'
 import Logo from '../../assets/KimshukaLogoDrk.svg';
 import Linkedin from '../../assets/LinkedIngry.svg';
+import { Link } from 'react-router-dom';
+import style from './style.module.css'
+
 
 const Footer = () => {
   return (
@@ -8,17 +11,30 @@ const Footer = () => {
       <div className='flex flex-col gap-4 w-[30%] '>
         <div className='w-[80%]'>
           <img src={Logo}/>
-          <h2 className='text-[#667085]'>Kimshuka Technologies builds impactful digital products that blend creativity, technology, and strategy for lasting business success.</h2>
+          <p className='text-[#667085]'>Kimshuka Technologies builds impactful digital products that blend creativity, technology, and strategy for lasting business success.</p>
         </div>
       </div>
       <div className=' gap-4 w-[70%] flex flex-row'>
         <div className=' w-[15%] flex flex-col'>
             <p className='text-[#F27F0C] h-10'>Company</p>
             <div className='flex flex-col gap-6 text-[#667085]'>
-            <p>Home</p>    
-            <p>About Us</p>    
-            <p>Contact</p>       
-            <p>Blogs</p>      
+          <Link to='/Home'>    
+           <p className={`${style['footer-link']}`}>
+             Home
+          </p>
+          </Link> 
+
+          <Link to='/about'>   
+           <p className={`${style['footer-link']}`}>About Us</p>
+          </Link>    
+
+          <Link to='/contact'>   
+           <p className={`${style['footer-link']}`}>Contact</p>
+          </Link> 
+
+          <Link to='/blogs'>   
+           <p className={`${style['footer-link']}`}>Blogs</p>
+          </Link>      
             </div>
    
        </div>

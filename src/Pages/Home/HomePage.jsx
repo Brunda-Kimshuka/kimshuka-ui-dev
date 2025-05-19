@@ -11,7 +11,7 @@ import AboutUsHdng from './AboutUsHdng';
 import OurServicesSection from '../Components/OurServicesSection';
 import TestimonialsSlider from '../Components/TestimonialsSlider';
 import BlogCards from '../Components/BlogCards';
-// import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from '../Navbar/Footer';
@@ -20,18 +20,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const HomePage = () => {
-// const mainRef = useRef(null);
+const mainRef = useRef(null);
 
-//  useEffect(() => {
-//     ScrollTrigger.create({
-//       trigger: mainRef.current,
-//       start: "top top",
-//       end: "bottom+=80% top", // End after scroll completes
-//       pin: true,
-//       scrub: true,
-//       markers: true, // Set to true to debug
-//     });
-//   }, []);
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: mainRef.current,
+      start: "top top",
+      end: "bottom=80% top",
+      pin: true,
+      scrub: true,
+      markers: false, // Enable if you want debug
+    });
+  }, []);
 
   return (
 
@@ -40,7 +40,7 @@ const HomePage = () => {
      <Navbar />
    </div>
 
-  <div className="pt-[64px] flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10"  >
+  <div className="pt-[64px] flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10" ref={mainRef}  >
     <HeroComponent />
     
     <AboutUsHdng
@@ -57,19 +57,19 @@ const HomePage = () => {
       text='Delivered 30+ projects over 10 years with consistent results'
       />
        <AboutUsCard
-      headingA = '10 Years of '
-      headingB = 'Engineering Excellence'
-      text='Delivered 30+ projects over 10 years with consistent results'
+      headingA = '25+ long '
+      headingB = 'Standing Customers '
+      text='count on us for smart solutions and lasting results.'
       />
        <AboutUsCard
-      headingA = '10 Years of '
-      headingB = 'Engineering Excellence'
-      text='Delivered 30+ projects over 10 years with consistent results'
+      headingA = 'Result '
+      headingB = 'Oriented Culture'
+      text='Our metrics are your business outcomes.'
       />
        <AboutUsCard
-      headingA = '10 Years of '
-      headingB = 'Engineering Excellence'
-      text='Delivered 30+ projects over 10 years with consistent results'
+      headingA = 'Customer'
+      headingB = 'First Approach '
+      text='We prioritize what drives your bottom line.'
       />
     </div>
    
@@ -79,9 +79,9 @@ const HomePage = () => {
     PyrA='Our services are designed to meet your exact needs and support '
     PyrB='your long term vision.'
     />
-
+<div className='w-full py-18 px-4'>
     <OurServicesSection/>
-    
+</div> 
     <OurClients/>
     <div className='py-18 w-[100%] px-[6%]'>
     <TestimonialsSlider/>
@@ -97,18 +97,18 @@ const HomePage = () => {
     </div>
   </div>
 
-  <div className='flex w-full gap-4 px-[6%]'>
+  <div className='flex w-full gap-4 px-[6%] my-8'>
      <BlogCards/>
      <BlogCards/>
      <BlogCards/>
-
   </div>
 
     <CTABanner/>
   </div>
 
-  <div className={`w-full bg-black relative z-0 mt-8`} >
-    <div className=''>
+  <div className={`w-full bg-black relative z-0 h-[80vh]`}  ref={mainRef}>
+    
+    <div className=' w-full flex h-[100vh] items-end'>
     <Footer/>
     </div>
     </div>
