@@ -83,6 +83,13 @@ const mainRef = useRef(null);
     <OurServicesSection/>
 </div> 
     <OurClients/>
+
+    <AboutUsHdng
+    OrngHdng='Testimonials'
+    PrimaryHdng='What Our Client’s Say'
+    Hidden='hidden'
+    />
+
     <div className='py-18 w-[100%] px-[6%]'>
     <TestimonialsSlider/>
     </div>
@@ -106,7 +113,7 @@ const mainRef = useRef(null);
     <CTABanner/>
   </div>
 
-  <div className={`w-full bg-black relative z-0 h-[80vh]`}  ref={mainRef}>
+  <div className={`w-full bg-black relative z-0 h-[90vh]`}  ref={mainRef}>
     
     <div className=' w-full flex h-[100vh] items-end'>
     <Footer/>

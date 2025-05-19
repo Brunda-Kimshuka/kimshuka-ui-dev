@@ -71,22 +71,22 @@ const Navbar = () => {
           className={`${activeTab === 'blogs' ? 'text-[#F27F0C]' : 'text-[#667085]'} relative   hover:text-[#1B1B1D] transition-colors duration-300 
              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}>Blogs</Link>
 
-        <Link to="/contact"
+        {/* <Link to="/contact"
           className={`${activeTab === 'contact' ? 'text-[#F27F0C]' : 'text-[#667085]'} relative   hover:text-[#1B1B1D] transition-colors duration-300 
              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}>Contacts
-      </Link>
+      </Link> */}
 
       </div>
 
       <div className=' gap-4 flex items-center'>
         <div className='bg-blue-300 w-10 h-10 border rounded-full'><img/></div>
-        <div className='flex py-2 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
+        <Link to="/contact" className='flex py-2 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
             <h4>Get Started</h4>
             <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>
                 <img src={Arrow} className='group-hover:hidden'/>
                 <img src={Arrowrignt} className=' hidden group-hover:block'/>               
             </div>
-        </div>
+        </Link>
       </div>
     </nav>
   )

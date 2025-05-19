@@ -2,18 +2,24 @@
   position: relative;
   display: inline-block;
   text-decoration: none;
+  color: #667085; 
+  transition: color 0.3s ease;
 }
 
 .footer-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -4px; /* Adjust as needed */
+  bottom: -4px; 
   height: 1px;
   width: 100%;
   background-color: #F27F0C;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white; 
 }
 
 .footer-link:hover::after {

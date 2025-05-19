@@ -2,6 +2,7 @@ import React from 'react'
 import BlogOne from '../../assets/Blogone.svg';
 
 const BlogCards = () => {
+  
   return (
     <div className='w-[33%] flex flex-col gap-4 border-[1px] border-[#d5d3d3] rounded-2xl overflow-hidden' >
       <div className="relative group overflow-hidden ">
