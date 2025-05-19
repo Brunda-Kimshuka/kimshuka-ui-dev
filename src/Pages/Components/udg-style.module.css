@@ -4,14 +4,10 @@
 
 .PrimaryFont{
   font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 .SecondaryFont{
  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 .no-Scrollbar {

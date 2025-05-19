@@ -23,7 +23,7 @@ const HeroComponent = () => {
             <p className='text-[#F27F0C] text-lg font-normal'>Your Vision. Our Expertise.</p>
           </div>  
             <h2 className='text-[62px] font-bold my-4 '>Bright Minds <br/> Solving Challenges, Side by Side</h2>
-            <p className='text-[24px] font-normal'>Lorem ipsum dolor sit amet consectetur <br/>  Tempus varius pulvinar elit rutrum</p>
+            <p className='text-[24px] font-normal'>We co-create tech solutions for growing businesses blending cost-efficiency, <br/> precision and innovation.</p>
 
           <div className='w-full flex justify-center my-6' onMouseEnter={() => setIsHovered(true)}
                                                            onMouseLeave={() => setIsHovered(false)}>

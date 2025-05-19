@@ -6,6 +6,8 @@ import { useState } from "react";
 
 const AboutUsCard = ({ headingA,headingB, text }) => {
 
+  
+
  const [isHovered, setIsHovered] = useState(false);
 
   return (

@@ -26,7 +26,7 @@ const OurServicesSection = () => {
       }, []);
 
   return (
-   <div className={`${style["no-Scrollbar"]}  w-full overflow-x-auto py-20 px-8`} ref={scrollRef}>
+   <div className={`${style["no-Scrollbar"]}  w-full overflow-x-auto py-2 px-8`} ref={scrollRef}>
     <div className={` flex gap-4  w-max`}>
       <OurServicesCard />
       <OurServicesCard />

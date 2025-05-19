@@ -41,7 +41,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex gap-20 py-[5%] w-[100%] items-center justify-center">
+    <div className="flex gap-20 py-[5%] w-[100%] items-start justify-center h-[60vh]">
       <div>
         <h1 className={`${style['PrimaryFont']} text-[40px] text-[#0A0A0A] font-bold `}>
           Frequent <br /> Questions and Answer
@@ -87,9 +87,9 @@ function FAQItem({ faqItem, isVisible, onToggle }) {
           )}
         </button>
       </div>
-      {isVisible && (
-        <p className={`${style['SecondaryFont']} text-[18px] text-[#667085] font-normal`}>{answer}</p>
-      )}
+      
+        <p className={`${style['SecondaryFont']} ${isVisible ? "max-h-auto opacity-100" : "max-h-0 opacity-0"} transition-all ease-in-out duration-300 text-[18px] text-[#667085] font-normal`}>{answer}</p>
+      
       <hr className="border-[#D0D5DD] my-4" />
     </li>
   );
