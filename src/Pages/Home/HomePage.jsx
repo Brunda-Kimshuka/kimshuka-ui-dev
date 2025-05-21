@@ -40,7 +40,7 @@ const mainRef = useRef(null);
      <Navbar />
    </div>
 
-  <div className="pt-[64px] flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10" ref={mainRef}  >
+  <div className="pt-[64px] flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10">
     <HeroComponent />
     
     <AboutUsHdng
@@ -97,25 +97,27 @@ const mainRef = useRef(null);
     <FAQ/>
 
   <div className='flex justify-between items-center py-4 w-full px-[6%]'>
-    <h2 className='text-[32px] font-medium'>Latest Blogs</h2>
-    <div className='h-8  flex gap-2 justify-center items-center'>
-      <h3 className='text-[18px] font-normal text-[#667085]'>Read All</h3>
+    <h2 className='xl:text-[32px] lg:text-[28px] font-medium'>Latest Blogs</h2>
+    <div className='h-8  flex gap-2 justify-center items-center cursor-pointer'>
+      <h3 className='xl:text-[18px] lg:text-[16px] font-normal text-[#667085]'>Read All</h3>
       <img src='' className='w-4 h-4'/>
     </div>
   </div>
 
-  <div className='flex w-full gap-4 px-[6%] my-8'>
+  <div className='flex w-full gap-4 px-[6%] xl:my-8 lg:my-6'>
      <BlogCards/>
      <BlogCards/>
      <BlogCards/>
   </div>
 
-    <CTABanner/>
+  <div className='flex w-full gap-4 px-[2%] xl:my-8 lg:my-6'>
+  <CTABanner/>
+    </div>
   </div>
 
-  <div className={`w-full bg-black relative z-0 h-[90vh]`}  ref={mainRef}>
+  <div className={`w-full bg-black relative z-0 h-[80vh] `}  ref={mainRef}>
     
-    <div className=' w-full flex h-[100vh] items-end'>
+    <div className=' w-full flex h-[100vh] items-end overflow-auto'>
     <Footer/>
     </div>
     </div>

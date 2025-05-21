@@ -38,10 +38,10 @@ const OurServicesCard = () => {
 
   return ( <>
     { Ourdata.map((item) => (
-      <div className='flex flex-col gap-4  border-[1px] rounded-2xl border-[#D0D5DD] w-[550px] p-4' key={item.id}>
+      <div className='flex flex-col gap-4  border-[1px] rounded-2xl border-[#D0D5DD] xl:w-[550px] lg:w-[500px] p-4' key={item.id}>
         <div className='flex w-12 h-12 justify-center items-center border-[1px] rounded-full border-[#13151a]'>{item.id}</div>
-        <h1 className={`font-medium text-2xl `}>{item.name}</h1>
-        <p className={`font-normal text-lg`}>{item.discription}</p>
+        <h1 className={`font-medium xl:text-2xl lg:text-[20px] `}>{item.name}</h1>
+        <p className={`font-normal xl:text-lg lg:text-base`}>{item.discription}</p>
 
         <button className='px-4 py-2 flex justify-center items-center bg-[#0A0A0A] hover:bg-[#F27F0C] transition-all duration-300 text-[#ffff] rounded-full w-[30%]'>Read More</button>
       </div>))}

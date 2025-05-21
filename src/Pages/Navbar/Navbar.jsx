@@ -81,7 +81,7 @@ const Navbar = () => {
       <div className=' gap-4 flex items-center'>
         <div className='bg-blue-300 w-10 h-10 border rounded-full'><img/></div>
         <Link to="/contact" className='flex py-2 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
-            <h4>Get Started</h4>
+            <h4>Contact Us</h4>
             <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>
                 <img src={Arrow} className='group-hover:hidden'/>
                 <img src={Arrowrignt} className=' hidden group-hover:block'/>               
