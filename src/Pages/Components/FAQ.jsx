@@ -41,17 +41,17 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex gap-20 py-[5%] w-[100%] items-start justify-center h-[60vh]">
-      <div>
-        <h1 className={`${style['PrimaryFont']} text-[40px] text-[#0A0A0A] font-bold `}>
+    <div className="flex gap-20 xl:p-[5%] lg:p-[6%]  w-[100%] items-start justify-between ">
+      <div className="w-[50%]">
+        <h1 className={`${style['PrimaryFont']} xl:text-[40px] lg:text-[36px] text-[#0A0A0A] font-bold `}>
           Frequent <br /> Questions and Answer
         </h1>
-        <h4 className={`${style['SecondaryFont']} text-[16px] text-[#667085] font-normal`}>
+        <h2 className={`${style['SecondaryFont']} xl:text-[16px] lg:text-[14px] text-[#667085] font-normal`}>
           Have another questions? Email us at{" "}
           <a href={`mailto:${email}`} className="text-[#F27F0C]">
             {email}
           </a>
-        </h4>
+        </h2>
       </div>
       <div className="w-[50%]">
         <ul>
@@ -74,11 +74,11 @@ function FAQItem({ faqItem, isVisible, onToggle }) {
 
   return (
     <li key={id}>
-      <div className="flex gap-4 items-center justify-between">
-        <h2 className={`${style['PrimaryFont']} text-[24px] text-[#0A0A0A] font-medium `}>{question}</h2>
+      <div className="flex gap-4 items-center justify-between ">
+        <h2 className={`${style['PrimaryFont']} xl:text-[24px] lg:text-[20px] text-[#0A0A0A] font-medium w-[90%]`}>{question}</h2>
         <button
           onClick={()=>onToggle(id)}
-          className="h-6 w-6 bg-[#F27F0C] rounded-full text-white "
+          className="h-6 w-6 bg-[#F27F0C] rounded-full text-white p-1"
         >
           {isVisible ? (
             <img src="src/assets/minus-sign.svg" alt="minus" />
@@ -88,7 +88,7 @@ function FAQItem({ faqItem, isVisible, onToggle }) {
         </button>
       </div>
       
-        <p className={`${style['SecondaryFont']} ${isVisible ? "max-h-auto opacity-100" : "max-h-0 opacity-0"} transition-all ease-in-out duration-300 text-[18px] text-[#667085] font-normal`}>{answer}</p>
+        <p className={`${style['SecondaryFont']} ${isVisible ? "max-h-auto opacity-100" : "max-h-0 opacity-0"} transition-all ease-in-out duration-300 xl:text-[18px] lg:text-[16px] text-[#667085] font-normal`}>{answer}</p>
       
       <hr className="border-[#D0D5DD] my-4" />
     </li>

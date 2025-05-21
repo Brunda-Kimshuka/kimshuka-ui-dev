@@ -88,13 +88,13 @@ const TestimonialsSlider = () => {
     <div className="flex justify-between mt-20 relative">
         <button
           ref={prevRef}
-          className="px-4 py-2 bg-[#1B1B1D] flex justify-center items-center w-15 h-15 hover:bg-[#F27F0C] rounded-full absolute right-[43%] bottom-0"
+          className="px-4 py-2 bg-[#1B1B1D] cursor-pointer flex justify-center items-center w-15 h-15 hover:bg-[#F27F0C] rounded-full absolute right-[43%] bottom-0"
         >
           <img src={Left} alt="" />
         </button>
         <button
           ref={nextRef}
-          className="px-4 py-2 bg-[#1B1B1D] flex justify-center items-center rounded-full w-15 h-15 hover:bg-[#F27F0C] absolute left-[43%] bottom-0"
+          className="px-4 py-2 cursor-pointer bg-[#1B1B1D] flex justify-center items-center rounded-full w-15 h-15 hover:bg-[#F27F0C] absolute left-[43%] bottom-0"
         >
           <img src={Right} alt="" />
         </button>
