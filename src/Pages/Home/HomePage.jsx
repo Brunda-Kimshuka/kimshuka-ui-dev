@@ -16,10 +16,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from '../Navbar/Footer';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 
 const HomePage = () => {
+  
 const mainRef = useRef(null);
 
   useEffect(() => {
@@ -73,15 +75,11 @@ const mainRef = useRef(null);
       />
     </div>
    
-    <AboutUsHdng
-    OrngHdng='Our Services'
-    PrimaryHdng='How We Help You Succeed'
-    PyrA='Our services are designed to meet your exact needs and support '
-    PyrB='your long term vision.'
-    />
-<div className='w-full py-18 px-4'>
+    
+<div className={` w-full py-18 px-4`} >
     <OurServicesSection/>
 </div> 
+
     <OurClients/>
 
     <AboutUsHdng
