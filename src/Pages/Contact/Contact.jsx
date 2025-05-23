@@ -30,7 +30,7 @@ const Contact = () => {
      <Navbar />
    </div>
      <div className="pt-[64px] flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10">
-      <div className='w-full px-[15%] py-[5%] flex  justify-between'>
+      <div className='w-full px-[15%] py-[2%] flex  justify-between'>
         <div className='w-[45%] py-[10%] px-6 text-[#fff] gap-4 flex flex-col justify-center rounded-2xl' style={{
             backgroundImage: `url(${BgImg})`,
             backgroundRepeat: 'no-repeat',
@@ -41,10 +41,8 @@ const Contact = () => {
             <p className='xl:text-xl lg:text-lg w-[95%]'>Reach out to our team today, and let’s start crafting solutions that drive your business forward.</p>
 
         </div>
-        <div className='w-[42%]'>
-          
+        <div className='w-[42%]'>         
           <ContactForm/>
-
         </div>
 
       </div>
