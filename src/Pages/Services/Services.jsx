@@ -35,8 +35,7 @@ const Services = () => {
         {activeService?(<CurrentService/>):(<p>Please select a component from the dropdown</p>)}
         <FAQ/>
         <CTABanner />
-        <Footer />
-        
+        <Footer />  
    </div>
   )
 }

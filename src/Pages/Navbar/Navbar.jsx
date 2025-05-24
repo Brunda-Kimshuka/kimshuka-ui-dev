@@ -15,12 +15,9 @@ const Navbar = ({ onSelectService }) => {
   const dropdownRef = useRef(null);
   
   
-  // const handleHoverEnter = () => {
-  //   setIsVisible(true);
-  // }
-  // const handleHoverLeave = () => {
-  //   setIsVisible(false)
-  // }
+  const handleHoverEnter = () => {
+    setIsVisible(true);
+  }
   const handleOnClick = () => {
     setIsVisible(!isVisible)
   }
@@ -72,8 +69,9 @@ const Navbar = ({ onSelectService }) => {
              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}
           to="/services"
           onClick={handleOnClick}
+          onMouseEnter={handleHoverEnter} 
         >
-          {/* onMouseEnter={handleHoverEnter} onMouseLeave={handleHoverLeave} */}
+          
           <h2>Services</h2>
 
           <div className="w-4 h-4">
@@ -84,7 +82,7 @@ const Navbar = ({ onSelectService }) => {
             />
           </div>
         </Link>
-        {isVisible && <DropDown onSelectService={onSelectService} onClose={closeDropdown}/>}
+        {isVisible && <DropDown onSelectService={onSelectService} onClose={closeDropdown} />}
 
         <Link
           to="/about"

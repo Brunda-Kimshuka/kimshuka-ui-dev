@@ -44,7 +44,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex gap-20 py-[5%] w-[100%] items-start justify-center h-[75vh]">
+    <div className="flex gap-20 py-[5%] w-[100%] items-start justify-center h-[75vh] sm:p-[5%]">
       <div>
         <h1
           className={`${style["PrimaryFont"]} text-[40px] text-[#0A0A0A] font-bold `}

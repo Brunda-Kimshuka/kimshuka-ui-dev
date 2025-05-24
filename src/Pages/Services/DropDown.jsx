@@ -9,7 +9,7 @@ const DropDown = ({ onSelectService, onClose }) => {
     onClose();
   }
   return (
-    <div className="bg-[#FCFAFA] h-[352px] w-[764px] absolute left-80 top-20 rounded-2xl flex gap-3 justify-between p-[16px] border-[#D0D5DD] border-1 shadow-sm (box-shadow: 0px 3px 8px 0 rgb(208 213 221);)">
+    <div className="bg-[#FCFAFA] h-[352px] w-[764px] absolute left-0 lg:left-[15%] xl:left-[20%] 2xl:left-[35%] top-20 rounded-2xl flex gap-3 justify-between p-[16px] z-1 border-[#D0D5DD] border-1 shadow-sm (box-shadow: 0px 3px 8px 0 rgb(208 213 221);)">
       <div
         style={{
           backgroundImage: `url(${gradientImg})`,
@@ -23,8 +23,8 @@ const DropDown = ({ onSelectService, onClose }) => {
           alignItems: "flex-end",
         }}
         >
-        <div className="space-y-2 p-[12px]">
-          <h1>Need a Custom Solution?</h1>
+        <div className="space-y-2 p-[12px] text-[#FCFAFA]">
+          <h1 className="text-[18px]">Need a Custom Solution?</h1>
           <h2>
             Let's build technology tailored to <br /> your business goals.
           </h2>

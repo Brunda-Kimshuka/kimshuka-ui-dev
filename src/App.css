@@ -17,3 +17,11 @@ h2 {
 p {
   font-family: "Roboto", sans-serif;
 }
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
