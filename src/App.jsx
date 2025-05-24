@@ -7,13 +7,14 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Contact from "./Pages/Contact/Contact";
 import Navbar from './Pages/Navbar/Navbar';
 import './App.css'
+import Scrolltop from './Scrolltop';
 
 function App() {
 
   return (
 
 <Router>
- 
+ <Scrolltop/>
     <Routes>
         <Route path="/" element={<HomePage />} />
 

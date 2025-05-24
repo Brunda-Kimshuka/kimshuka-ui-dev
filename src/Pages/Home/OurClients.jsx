@@ -9,7 +9,7 @@ const OurClients = () => {
             PyrA="We've partnered with businesses across industries to deliver tailored solutions,"
             PyrB='streamline digital operations, and modernize tech stacks.'
         />
-        <div className='grid grid-cols-4 grid-rows-2 w-[1000px] h-[400px] pt-12 pb-12'>
+        <div className='grid grid-cols-4 grid-rows-2 w-full h-auto py-12 px-32'>
             <div className='relative'>
                 <img src="src/assets/image 7.svg" alt="tenxerlabs" />
                 <h4 className='flex items-center justify-center text-[#667085] text-[15px]'>Tenxerlabs.com</h4>

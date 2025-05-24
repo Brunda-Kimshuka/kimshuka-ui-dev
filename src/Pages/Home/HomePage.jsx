@@ -15,12 +15,16 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from '../Navbar/Footer';
+import NavbarMobile from '../Navbar/NavbarMobile';
+import { BlogData } from '../Blogs/BlogData.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const HomePage = () => {
+  
 const mainRef = useRef(null);
+
 
   useEffect(() => {
     ScrollTrigger.create({
@@ -33,14 +37,21 @@ const mainRef = useRef(null);
     });
   }, []);
 
+  console.log('^^^^^^^^^^^',BlogData);
+  
+  
+
   return (
 
    <div className={ ` w-full h-full flex flex-col  `}>
-   <div className="fixed top-0 left-0 w-full z-20">
+   <div className="fixed top-0 left-0 w-full z-20 md:block max-sm:hidden">
      <Navbar />
    </div>
+   <div className="fixed top-0 left-0 w-full z-20 max-sm:block md:hidden">
+     <NavbarMobile/>
+   </div>
 
-  <div className="pt-[64px] flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10" ref={mainRef}  >
+  <div className="pt-[64px] w-full flex-1 overflow-y-auto bg-[#FCFAFA] flex items-center flex-col z-10 " ref={mainRef}>
     <HeroComponent />
     
     <AboutUsHdng
@@ -50,7 +61,7 @@ const mainRef = useRef(null);
     PyrB='that don’t just satisfy clients-they inspire lasting partnerships.'
     />
     
-    <div className='bg-pink grid grid-cols-12 gap-6 w-[70%] pt-10 pb-16'>
+    <div className='bg-pink grid grid-cols-12 gap-6 md:w-[70%] max-sm:w-[90%] pt-10 pb-16'>
       <AboutUsCard
       headingA = '10 Years of '
       headingB = 'Engineering Excellence'
@@ -73,16 +84,19 @@ const mainRef = useRef(null);
       />
     </div>
    
-    <AboutUsHdng
-    OrngHdng='Our Services'
-    PrimaryHdng='How We Help You Succeed'
-    PyrA='Our services are designed to meet your exact needs and support '
-    PyrB='your long term vision.'
-    />
-<div className='w-full py-18 px-4'>
+    
+<div className={` w-full py-18 px-4 overflow-hidden`}  >
     <OurServicesSection/>
 </div> 
+
     <OurClients/>
+
+    <AboutUsHdng
+    OrngHdng='Testimonials'
+    PrimaryHdng='What Our Client’s Say'
+    Hidden='hidden'
+    />
+
     <div className='py-18 w-[100%] px-[6%]'>
     <TestimonialsSlider/>
     </div>
@@ -90,25 +104,33 @@ const mainRef = useRef(null);
     <FAQ/>
 
   <div className='flex justify-between items-center py-4 w-full px-[6%]'>
-    <h2 className='text-[32px] font-medium'>Latest Blogs</h2>
-    <div className='h-8  flex gap-2 justify-center items-center'>
-      <h3 className='text-[18px] font-normal text-[#667085]'>Read All</h3>
+    <h2 className='xl:text-[32px] lg:text-[28px] font-medium'>Latest Blogs</h2>
+    <div className='h-8  flex gap-2 justify-center items-center cursor-pointer'>
+      <h3 className='xl:text-[18px] lg:text-[16px] font-normal text-[#667085]'>Read All</h3>
       <img src='' className='w-4 h-4'/>
     </div>
   </div>
 
-  <div className='flex w-full gap-4 px-[6%] my-8'>
-     <BlogCards/>
-     <BlogCards/>
-     <BlogCards/>
+  <div className='grid grid-cols-12 w-full gap-4 px-[6%] xl:my-8 lg:my-6'>
+     {BlogData.slice(0, 3).map((item, index) => (
+        <BlogCards
+          key={index}
+          Heading={item.Heading}
+          desc={item.desc}
+          date={item.date}
+          imgurl ={item.imgurl}
+        />
+      ))}
   </div>
 
-    <CTABanner/>
+  <div className='flex w-full gap-4 px-[2%] xl:my-8 lg:my-6'>
+  <CTABanner/>
+    </div>
   </div>
 
-  <div className={`w-full bg-black relative z-0 h-[80vh]`}  ref={mainRef}>
+  <div className={`w-full bg-black relative z-0 h-[80vh] `} ref={mainRef} >
     
-    <div className=' w-full flex h-[100vh] items-end'>
+    <div className=' w-full flex h-[100vh] items-end overflow-auto'>
     <Footer/>
     </div>
     </div>
