@@ -12,7 +12,7 @@ const AboutUsCard = ({ headingA,headingB, text }) => {
 
   return (
 
-     <div className={`relative bg-[#f5f2f262] border-[1px] border-[#D0D5DD] rounded-2xl col-span-6 xl:p-14 lg:p-8 text-center overflow-hidden transition-all duration-300 hover:bg-[#FCFAFA]`}  onMouseEnter={() => setIsHovered(true)}
+     <div className={`relative bg-[#f5f2f262] border-[1px] border-[#D0D5DD] rounded-2xl md:col-span-6 max-sm:col-span-12 max-sm:p-8 xl:p-14 lg:p-8 text-center overflow-hidden transition-all duration-300 hover:bg-[#FCFAFA]`}  onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}>
 {isHovered ? (
     < >   

@@ -88,7 +88,7 @@ export default function ContactForm() {
           placeholder="Full name"
           value={formData.fullName}
           onChange={handleChange}
-          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9]"
+          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9] focus:outline-none"
         />
         {errors.fullName && <p className="text-red-500 text-xs">{errors.fullName}</p>}
       </div>
@@ -101,15 +101,15 @@ export default function ContactForm() {
           placeholder="you@company.com"
           value={formData.email}
           onChange={handleChange}
-          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9]"
+          className="w-full mt-1 px-3 py-2 text-base font-normal  border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9] focus:outline-none"
         />
         {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
       </div>
 
       <div>
-        <label className="text-lg font-normal text-[#98A2B3] ">Phone number</label>
+        <label className="text-lg font-normal text-[#98A2B3]">Phone number</label>
         <div className="flex mt-1">
-          <select className=" rounded-l px-2 border-[#D0D5DD] border-[1px] bg-[#E9E9E9]">
+          <select className=" rounded-l text-[#98A2B3]  px-2 border-[#D0D5DD] border-[1px] bg-[#E9E9E9] focus:outline-none">
             <option>IND</option>
             <option>USA</option>
             <option>UK</option>
@@ -120,7 +120,7 @@ export default function ContactForm() {
             placeholder="000 0000 000"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 border-l-0 text-base font-normal rounded-r border-[#D0D5DD] border-[1px] bg-[#E9E9E9]"
+            className="w-full px-3 py-2 border-l-0 text-base font-normal rounded-r border-[#D0D5DD] border-[1px] bg-[#E9E9E9] focus:outline-none"
           />
         </div>
         {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
@@ -134,7 +134,7 @@ export default function ContactForm() {
           placeholder="Company name"
           value={formData.company}
           onChange={handleChange}
-          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9]"
+          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9] focus:outline-none"
         />
         {errors.company && <p className="text-red-500 text-xs">{errors.company}</p>}
       </div>
@@ -146,7 +146,7 @@ export default function ContactForm() {
           placeholder="Please enter any additional information"
           value={formData.message}
           onChange={handleChange}
-          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9]"
+          className="w-full mt-1 px-3 py-2 text-base font-normal border-[#D0D5DD] border-[1px]  rounded bg-[#E9E9E9] focus:outline-none"
           rows={3}
         />
       </div>
@@ -157,7 +157,7 @@ export default function ContactForm() {
           name="notRobot"
           checked={formData.notRobot}
           onChange={handleChange}
-          className="form-checkbox w-4 h-4 border-[1px] border-[#F27F0C]"
+          className="form-checkbox w-4 h-4 border-[1px]"
         />
         <label className="text-lg font-normal text-[#98A2B3] ">I’m not a robot</label>
       </div>
