@@ -30,8 +30,9 @@ const Services = () => {
   const CurrentService = servicesMap[activeService];
   return (
      <div className={ `w-full h-full flex flex-col items-center`}>
+      <div className="fixed top-0 left-0 w-full z-20">
         <Navbar onSelectService={handleSelectService}/>
-        
+       </div> 
         {activeService?(<CurrentService/>):(<p>Please select a component from the dropdown</p>)}
         <FAQ/>
         <CTABanner />
