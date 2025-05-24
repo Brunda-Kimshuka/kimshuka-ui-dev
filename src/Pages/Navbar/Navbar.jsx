@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 // import { useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/Kimshuka-Logo.svg';
@@ -9,21 +9,33 @@ import DropDown from '../Services/DropDown';
 import Arrowrignt from '../../assets/ArrowRight.svg';
 
 
-const Navbar = () => {
+const Navbar = ({ onSelectService }) => {
   const location = useLocation();
   const [isVisible, setIsVisible]=useState(false)
+  const dropdownRef = useRef(null);
   
   
-  // const handleHoverEnter = () => {
-  //   setIsVisible(true);
-  // }
-  // const handleHoverLeave = () => {
-  //   setIsVisible(false)
-  // }
-  const handleOnClick= () => {
+  const handleHoverEnter = () => {
+    setIsVisible(true);
+  }
+  const handleOnClick = () => {
     setIsVisible(!isVisible)
   }
+  const closeDropdown = () => {
+    setIsVisible(false)
+  }
 
+  useEffect(()=>{
+    const handleClickOutside = (event) => {
+      if(isVisible && dropdownRef.current && !dropdownRef.current.contains(event.target)){
+        closeDropdown();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+  },[isVisible])
 
   const getTabName = (path) => {
     const last = path.split('/').pop();
@@ -34,38 +46,53 @@ const Navbar = () => {
 
 
   return (
-    <nav className='flex justify-between py-2 px-[5%] bg-[#FCFAFA] border-b-[1px] border-[#D0D5DD]'>
-      <div className='w-[150px] h-[60px] items-center'>
-        <img src={Logo}/>
+    <nav className="flex w-full justify-between py-2 px-[5%] bg-[#FCFAFA] border-b-[1px] border-[#D0D5DD]">
+      <div className="w-[150px] h-[60px] items-center">
+        <img src={Logo} />
       </div>
 
-      <div className='flex gap-8 items-center'>
-        
+      <div className="flex gap-8 items-center" ref={dropdownRef}>
         <Link
           to="/home"
-          className={`${activeTab === 'home' ? 'text-[#F27F0C]' : ' text-[#667085]'} relative   hover:text-[#1B1B1D] transition-colors duration-300 
+          className={`${
+            activeTab === "home" ? "text-[#F27F0C]" : " text-[#667085]"
+          } relative   hover:text-[#1B1B1D] transition-colors duration-300 
              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}
         >
           Home
         </Link>
 
-        <Link className={`flex gap-2 items-center ${activeTab === 'services' ? 'text-[#F27F0C]' : 'text-[#667085]'} relative hover:text-[#1B1B1D] transition-colors duration-300 
-             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`} to="/services" 
-              onClick={handleOnClick}>
-              {/* onMouseEnter={handleHoverEnter} onMouseLeave={handleHoverLeave} */}
-         <h2>Services</h2>
-         
-         <div className='w-4 h-4'>
-            <img src={ArrowDwn} aria-haspopup="true"
-            aria-expanded={isVisible}/>
+        <Link
+          className={`flex gap-2 items-center ${
+            activeTab === "services" ? "text-[#F27F0C]" : "text-[#667085]"
+          } relative hover:text-[#1B1B1D] transition-colors duration-300 
+             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}
+          to="/services"
+          onClick={handleOnClick}
+          onMouseEnter={handleHoverEnter} 
+        >
+          
+          <h2>Services</h2>
+
+          <div className="w-4 h-4">
+            <img
+              src={ArrowDwn}
+              aria-haspopup="true"
+              aria-expanded={isVisible}
+            />
           </div>
         </Link>
-        {isVisible && <DropDown/>}
-          
+        {isVisible && <DropDown onSelectService={onSelectService} onClose={closeDropdown} />}
 
-        <Link to="/about"
-          className={`${activeTab === 'about' ? 'text-[#F27F0C]' : 'text-[#667085]'} relative   hover:text-[#1B1B1D] transition-colors duration-300 
-             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}>About Us</Link>
+        <Link
+          to="/about"
+          className={`${
+            activeTab === "about" ? "text-[#F27F0C]" : "text-[#667085]"
+          } relative   hover:text-[#1B1B1D] transition-colors duration-300 
+             after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}
+        >
+          About Us
+        </Link>
 
         <Link to="/blogs"
           className={`${activeTab === 'blogs' ? 'text-[#F27F0C]' : 'text-[#667085]'} relative   hover:text-[#1B1B1D] transition-colors duration-300 
@@ -76,6 +103,7 @@ const Navbar = () => {
              after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-0 after:bg-[#F27F0C] hover:after:w-full after:transition-[width] after:duration-500 after:ease-in-out cursor-pointer`}>Contacts
       </Link> */}
 
+        
       </div>
 
       <div className=' gap-4 flex items-center'>
@@ -89,7 +117,7 @@ const Navbar = () => {
         </Link>
       </div>
     </nav>
-  )
+  );
 }
 
 export default Navbar

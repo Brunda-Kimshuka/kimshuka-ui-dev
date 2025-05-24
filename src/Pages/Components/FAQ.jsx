@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from './udg-style.module.css'
 
 const faqData = [
@@ -36,6 +36,9 @@ const faqData = [
 const FAQ = () => {
   const [visibleAnswer, setVisibleAnswer] = useState(null);
   const email = "info@kimshuka.com";
+  useEffect(()=>{
+    setVisibleAnswer(faqData[0].id)
+  },[])
   const handleToggleAnswer = (itemId) => {
     setVisibleAnswer((prevId) => (prevId === itemId ? null : itemId));
   };
@@ -55,9 +58,9 @@ const FAQ = () => {
       </div>
       <div className="w-[50%]">
         <ul>
-          {faqData.map((faqItem)=>(
-            <FAQItem 
-              key={faqItem.id} 
+          {faqData.map((faqItem) => (
+            <FAQItem
+              key={faqItem.id}
               faqItem={faqItem}
               isVisible={visibleAnswer === faqItem.id}
               onToggle={handleToggleAnswer}
@@ -82,11 +85,11 @@ function FAQItem({ faqItem, isVisible, onToggle }) {
         >
           {isVisible ? (
             <img src="src/assets/minus-sign.svg" alt="minus" />
-          ) : (
+            ) : (
             <img src="src/assets/plus-sign.svg" alt="plus" />
-          )}
-        </button>
-      </div>
+            )}
+          </button>
+        </div>
       
         <p className={`${style['SecondaryFont']} ${isVisible ? "max-h-auto opacity-100" : "max-h-0 opacity-0"} transition-all ease-in-out duration-300 xl:text-[18px] lg:text-[16px] text-[#667085] font-normal`}>{answer}</p>
       

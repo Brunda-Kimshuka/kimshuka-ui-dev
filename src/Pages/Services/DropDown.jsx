@@ -1,10 +1,15 @@
 import React from "react";
 import gradientImg from "../../assets/Gradient.png";
+import { Link } from "react-router-dom";
 
 
-const DropDown = () => {
+const DropDown = ({ onSelectService, onClose }) => {
+  const handleItemClick = (serviceName) => {
+    onSelectService(serviceName);
+    onClose();
+  }
   return (
-    <div className="bg-[#FCFAFA] h-[352px] w-[764px] absolute left-80 top-20 rounded-2xl flex gap-3 justify-between p-[16px] border-[#D0D5DD] border-1 shadow-sm (box-shadow: 0px 3px 8px 0 rgb(208 213 221);)">
+    <div className="bg-[#FCFAFA] h-[352px] w-[764px] absolute left-0 lg:left-[15%] xl:left-[20%] 2xl:left-[35%] top-20 rounded-2xl flex gap-3 justify-between p-[16px] z-1 border-[#D0D5DD] border-1 shadow-sm (box-shadow: 0px 3px 8px 0 rgb(208 213 221);)">
       <div
         style={{
           backgroundImage: `url(${gradientImg})`,
@@ -17,9 +22,9 @@ const DropDown = () => {
           display: "flex",
           alignItems: "flex-end",
         }}
-      >
-        <div className="space-y-2 p-[12px]">
-          <h1>Need a Custom Solution?</h1>
+        >
+        <div className="space-y-2 p-[12px] text-[#FCFAFA]">
+          <h1 className="text-[18px]">Need a Custom Solution?</h1>
           <h2>
             Let's build technology tailored to <br /> your business goals.
           </h2>
@@ -33,12 +38,12 @@ const DropDown = () => {
       </div>
       <div className="h-[320px] w-[304px]">
         <ul className="flex flex-col gap-[30px] p-[16px]">
-          <li>API Management</li>
-          <li>IoT Platform</li>
-          <li>UX Services</li>
-          <li>Web and App Development</li>
-          <li>Product Consulting</li>
-          <li>Team Augmentation</li>
+          <li onClick={()=>handleItemClick('APIManagement')}>API Management</li>
+          <li onClick={()=>handleItemClick('IoTPlatform')}>IoT Platform</li>
+          <li onClick={()=>handleItemClick('UXServices')}>UX Services</li>
+          <li onClick={()=>handleItemClick('WebAndAppDevelopment')}>Web and App Development</li>
+          <li onClick={()=>handleItemClick('ProductConsulting')}>Product Consulting</li>
+          <li onClick={()=>handleItemClick('TeamAugmentation')}>Team Augmentation</li>
         </ul>
       </div>
     </div>
