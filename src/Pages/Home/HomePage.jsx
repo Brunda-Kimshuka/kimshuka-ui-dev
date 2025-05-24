@@ -16,7 +16,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from '../Navbar/Footer';
 import NavbarMobile from '../Navbar/NavbarMobile';
-
+import { BlogData } from '../Blogs/BlogData.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +37,8 @@ const mainRef = useRef(null);
     });
   }, []);
 
+  console.log('^^^^^^^^^^^',BlogData);
+  
   
 
   return (
@@ -109,10 +111,16 @@ const mainRef = useRef(null);
     </div>
   </div>
 
-  <div className='flex w-full gap-4 px-[6%] xl:my-8 lg:my-6'>
-     <BlogCards/>
-     <BlogCards/>
-     <BlogCards/>
+  <div className='grid grid-cols-12 w-full gap-4 px-[6%] xl:my-8 lg:my-6'>
+     {BlogData.slice(0, 3).map((item, index) => (
+        <BlogCards
+          key={index}
+          Heading={item.Heading}
+          desc={item.desc}
+          date={item.date}
+          imgurl ={item.imgurl}
+        />
+      ))}
   </div>
 
   <div className='flex w-full gap-4 px-[2%] xl:my-8 lg:my-6'>
