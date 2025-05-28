@@ -37,13 +37,13 @@ const DropDown = ({ onSelectService, onClose }) => {
         <div class="absolute inset-y-0 left-0 right-0 w-[1px] bg-gradient-to-b from-[#E3E3E3] via-[#BCBCBC] to-[#E3E3E3]"></div>
       </div>
       <div className="h-[320px] w-[304px]">
-        <ul className="flex flex-col gap-[30px] p-[16px]">
-          <li onClick={()=>handleItemClick('APIManagement')}>API Management</li>
-          <li onClick={()=>handleItemClick('IoTPlatform')}>IoT Platform</li>
-          <li onClick={()=>handleItemClick('UXServices')}>UX Services</li>
-          <li onClick={()=>handleItemClick('WebAndAppDevelopment')}>Web and App Development</li>
-          <li onClick={()=>handleItemClick('ProductConsulting')}>Product Consulting</li>
-          <li onClick={()=>handleItemClick('TeamAugmentation')}>Team Augmentation</li>
+        <ul className="flex flex-col gap-[10px] p-[16px]">
+          <li onClick={()=>handleItemClick('APIManagement')} className="hover:bg-[#F27F0C] rounded-md py-2 px-2 transition duration-300 cursor-pointer ">API Management</li>
+          <li onClick={()=>handleItemClick('IoTPlatform')} className="hover:bg-[#F27F0C] rounded-md py-2 px-2 transition duration-300 cursor-pointer ">IoT Platform</li>
+          <li onClick={()=>handleItemClick('UXServices')} className="hover:bg-[#F27F0C] rounded-md py-2 px-2 transition duration-300 cursor-pointer ">UX Services</li>
+          <li onClick={()=>handleItemClick('WebAndAppDevelopment')} className="hover:bg-[#F27F0C] rounded-md py-2 px-2 transition duration-300 cursor-pointer ">Web and App Development</li>
+          <li onClick={()=>handleItemClick('ProductConsulting')} className="hover:bg-[#F27F0C] rounded-md py-2 px-2 transition duration-300 cursor-pointer ">Product Consulting</li>
+          <li onClick={()=>handleItemClick('TeamAugmentation')} className="hover:bg-[#F27F0C] rounded-md py-2 px-2 transition duration-300 cursor-pointer ">Team Augmentation</li>
         </ul>
       </div>
     </div>

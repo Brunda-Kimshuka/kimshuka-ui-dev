@@ -1,6 +1,6 @@
 import React from 'react'
 import Arrow from '../../assets/ArrowUpRight.svg';
-import Arrowrignt from '../../assets/ArrowRight.svg';
+import Arrowright from '../../assets/ArrowRight.svg';
 import style from './udg-style.module.css'
 
 const CTABanner = () => {
@@ -12,7 +12,7 @@ const CTABanner = () => {
             <button className='relative group text-[#FFFFFF] bg-[#1B1B1D] hover:bg-[#F27F0C] px-4 py-2 flex  rounded-full items-center justify-center gap-2'>Get In Touch
                 <div className=' bg-[#F27F0C] p-1 rounded-full w-8 h-8 justify-center items-center'>
                     <img src={Arrow} className='group-hover:hidden'/>
-                    <img src={Arrowrignt} className=' hidden group-hover:block'/>
+                    <img src={Arrowright} className=' hidden group-hover:block'/>
                 </div>
             </button>
             </div>

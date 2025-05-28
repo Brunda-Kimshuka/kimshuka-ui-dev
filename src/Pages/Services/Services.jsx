@@ -9,7 +9,8 @@ import UXServices from './DropDownPages/UXServices'
 import WebAndAppDevelopment from './DropDownPages/WebAndAppDevelopment'
 import ProductConsulting from './DropDownPages/ProductConsulting'
 import TeamAugmentation from './DropDownPages/TeamAugmentation'
-import DropDown from './DropDown'
+
+
 
 const Services = () => {
   const [activeService, setActiveService] = useState('APIManagement');
@@ -34,6 +35,7 @@ const Services = () => {
         <Navbar onSelectService={handleSelectService}/>
        </div> 
         {activeService?(<CurrentService/>):(<p>Please select a component from the dropdown</p>)}
+        
         <FAQ/>
         <CTABanner />
         <Footer />  
