@@ -36,8 +36,6 @@ const mainRef = useRef(null);
       markers: false, // Enable if you want debug
     });
   }, []);
-
-  console.log('^^^^^^^^^^^',BlogData);
   
   
 
