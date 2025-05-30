@@ -53,9 +53,10 @@ const Navbar = ({ onSelectService }) => {
 
   return (
     <nav className="flex w-full justify-between py-2 px-[5%] bg-[#FCFAFA] border-b-[1px] border-[#D0D5DD]">
-      <div className="w-[150px] h-[60px] items-center">
+     <Link
+          to="/home" className="w-[150px] h-[60px] items-center">
         <img src={Logo} />
-      </div> 
+      </Link> 
 
       <div className="flex gap-8 items-center" ref={dropdownRef}>
         <Link
@@ -112,7 +113,7 @@ const Navbar = ({ onSelectService }) => {
         
       </div>
 
-      <div className=' gap-4 flex items-center' onClick={handleToggle}>
+      <div className=' gap-4 flex items-center cursor-pointer' onClick={handleToggle}>
         <div className=' w-10 h-10 border rounded-full'><img src={isDesi 
           ? IndiaImg 
           : USImg } 
