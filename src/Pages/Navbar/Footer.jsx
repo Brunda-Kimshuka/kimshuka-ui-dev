@@ -12,7 +12,7 @@ const Footer = ({ onSelectService, activeService }) => {
 
   const handleChange = (e) => {
     onSelectService(e.target.value);
-    onClose();
+    // onClose();
   };
   return (
     <footer

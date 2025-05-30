@@ -5,6 +5,8 @@ import Arrow from '../../assets/ArrowUpRight.svg';
 import ArrowDwn from '../../assets/CaretDown.svg';
 import DropDown from '../Services/DropDown';
 import Arrowrignt from '../../assets/ArrowRight.svg';
+import IndiaImg from '../../assets/IndiaImg.svg';
+import USImg from '../../assets/UsImg.svg';
 
 
 const Navbar = ({ onSelectService }) => {
@@ -12,6 +14,11 @@ const Navbar = ({ onSelectService }) => {
   const [isVisible, setIsVisible]=useState(false)
   const dropdownRef = useRef(null);
   
+  const [isDesi, setIsDesi] = useState(true);
+
+  const handleToggle = () => {
+    setIsDesi(prev => !prev);
+  };
   
   const handleHoverEnter = () => {
     setIsVisible(true);
@@ -45,9 +52,10 @@ const Navbar = ({ onSelectService }) => {
 
   return (
     <nav className="flex w-full justify-between py-2 px-[5%] bg-[#FCFAFA] border-b-[1px] border-[#D0D5DD]">
-      <div className="w-[150px] h-[60px] items-center">
+     <Link
+          to="/home" className="w-[150px] h-[60px] items-center">
         <img src={Logo} />
-      </div>
+      </Link> 
 
       <div className="flex gap-8 items-center" ref={dropdownRef}>
         <Link
@@ -104,8 +112,12 @@ const Navbar = ({ onSelectService }) => {
         
       </div>
 
-      <div className=' gap-4 flex items-center'>
-        <div className='bg-blue-300 w-10 h-10 border rounded-full'><img/></div>
+      <div className=' gap-4 flex items-center cursor-pointer' onClick={handleToggle}>
+        <div className=' w-10 h-10 border rounded-full'><img src={isDesi 
+          ? IndiaImg 
+          : USImg } 
+        alt={isDesi ? "IndiAa" : "US"}
+        className="w-full h-full object-cover"/></div>
         <Link to="/contact" className='flex py-2 px-4 gap-2 text-[#FFFFFF] bg-[#1B1B1D] justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
             <h4>Contact Us</h4>
             <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>

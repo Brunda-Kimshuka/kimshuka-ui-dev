@@ -11,8 +11,8 @@ const AboutUsCard = ({ headingA,headingB, text }) => {
  const [isHovered, setIsHovered] = useState(false);
 
   return (
-
-     <div className={`relative bg-[#f5f2f262] border-[1px] border-[#D0D5DD] rounded-2xl md:col-span-6 max-sm:col-span-12 max-sm:p-8 xl:p-14 lg:p-8 text-center overflow-hidden transition-all duration-300 hover:bg-[#FCFAFA]`}  onMouseEnter={() => setIsHovered(true)}
+<>
+     <div className={`relative bg-[#f5f2f262] border-[1px] border-[#D0D5DD] rounded-2xl md:col-span-6 max-sm:col-span-12 max-sm:p-8 xl:p-14 lg:p-8 text-center overflow-hidden transition-all duration-300 hover:bg-[#FCFAFA] md:block max-sm:hidden`}  onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}>
 {isHovered ? (
     < >   
@@ -33,6 +33,13 @@ const AboutUsCard = ({ headingA,headingB, text }) => {
     </>
     )}
     </div>
+
+    <div className={`relative bg-[#f5f2f262] border-[1px] border-[#FEE4AA] rounded-2xl  max-sm:col-span-12 max-sm:p-8 text-center overflow-hidden transition-all duration-300 hover:bg-[#FCFAFA] md:hidden max-sm:block`}>
+      <h2 className={`${style['PrimaryFont']} max-sm:text-lg text-[#0A0A0A] font-medium`}>{ headingA}<br/>{headingB}</h2>
+        <p className={`${style['SecondaryFont']} max-sm:text-[14px]  text-[#667085] font-normal`}>{text}</p>
+    </div>
+
+    </>
   )
 }
 

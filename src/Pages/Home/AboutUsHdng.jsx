@@ -2,9 +2,9 @@ import React from 'react'
 import KimshukaImg from '../../assets/flwrLogo.svg';
 
 
-const AboutUsHdng = ({OrngHdng, PrimaryHdng, PyrA, PyrB, Hidden}) => {
+const AboutUsHdng = ({OrngHdng, PrimaryHdng, PyrA, PyrB, Hidden,margin}) => {
   return (
-    <div className="flex flex-col gap-4 justify-center items-center py-8 text-center px-4">
+    <div className={`${margin} flex flex-col gap-4 justify-center items-center py-8 text-center px-4`}>
       <div className="flex gap-2">
         <img className=" " src={KimshukaImg}/>
         <h2 className="text-[#F27F0C] 2xl:text-lg xl:text-base lg:text-sm max-sm:text-xs">{OrngHdng}</h2>

@@ -44,19 +44,19 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex gap-20 xl:p-[5%] lg:p-[6%] md:p-[5%] sm:p-[5%]  w-[100%] items-start justify-between ">
-      <div className="w-[50%]">
-        <h1 className={`${style['PrimaryFont']} 2xl:text-[62px] xl:text-[58px] lg:text-[54px] text-[#0A0A0A] font-bold `}>
+    <div className="flex lg:gap-20 max-sm:gap-10 lg:flex-row max-sm:flex-col  xl:p-[5%] lg:p-[6%] max-sm:px-4  w-[100%] lg:items-start max-sm:items-center justify-between ">
+      <div className="lg:w-[50%] sm:w-full lg:text-start  max-sm:text-center">
+        <h1 className={`${style['PrimaryFont']} xl:text-[40px] lg:text-[36px] max-sm:text-[24px] text-[#0A0A0A] font-bold `}>
           Frequent <br /> Questions and Answer
         </h1>
-        <h2 className={`${style['SecondaryFont']} 2xl:text-base xl:text-sm lg:text-xs text-[#667085] font-normal`}>
+        <h2 className={`${style['SecondaryFont']} xl:text-[16px] lg:text-[14px] max-sm:text-[16px] text-[#667085] font-normal`}>
           Have another questions? Email us at{" "}
           <a href={`mailto:${email}`} className="text-[#F27F0C]">
             {email}
           </a>
         </h2>
       </div>
-      <div className="w-[50%]">
+      <div className="lg:w-[50%] sm:w-full">
         <ul>
           {faqData.map((faqItem) => (
             <FAQItem
