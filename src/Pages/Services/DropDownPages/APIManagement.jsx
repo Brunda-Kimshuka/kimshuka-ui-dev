@@ -77,30 +77,31 @@ const APIManagement = () => {
 
   return (
     <div className="flex flex-col ">
-      <div className='flex w-full h-screen px-[80px] py-[100px] gap-4'>
-        <div className="h-[490px] w-[40%] flex flex-col flex-shrink-0">
+      <div className='2xl:flex xl:flex lg:flex md:flex sm:flex max-sm:px-0 max-sm:h-[2164px] w-full h-screen px-[80px] py-[100px] gap-4 '>
+        <div className="h-[490px] w-[40%] max-sm:w-[328px] max-sm:h-[245px] flex flex-col flex-shrink-0">
           <ServiceHdng
             PriHdng="Our Services"
             SecHdng="API Management"
             Para="Seamlessly integrate, secure and scale your applications with Kimshuka's robust API solutions, built for agility, reliability and cost-efficiency. We help you deliver resilient, future-ready APIs, without enterprise-level overhead."
          />
          <Link to="/contact" className='flex py-2 px-4  gap-2 text-[#FFFFFF] bg-[#1B1B1D] w-fit justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
-             <h4>Talk to an Integration Specialist</h4>
+             <h4 className='2xl:text-lg xl:text-base lg:text-base md:text-sm sm:text-xs'>Talk to an Integration Specialist</h4>
              <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>
                  <img src={Arrow} className='group-hover:hidden'/>
                   <img src={Arrowright} className=' hidden group-hover:block'/>               
               </div>
           </Link>
         </div>
-        <div className="w-[60%] flex flex-col flex-1">
+        <div className="w-[60%] flex flex-1">
           <ServiceScroll services={scrollData} />
         </div>
       </div>
-      <div className='h-full w-full'>
+      <div className='h-full w-full max-sm:h-[964px]'>
         <div>
           <AboutUsHdng
             OrngHdng='Our Approach'
             PrimaryHdng='How We Make API Management Work for You'
+            Hidden='hidden'
           />
         </div>
         <div>

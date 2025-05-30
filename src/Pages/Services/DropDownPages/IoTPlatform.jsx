@@ -57,7 +57,7 @@ const IoTPlatform = () => {
     }
   ]
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col' >
       <div className="flex w-full h-screen px-[80px] py-[100px] gap-4">
         <div className="h-[490px] w-[40%] flex flex-col flex-shrink-0">
           <ServiceHdng
@@ -66,7 +66,7 @@ const IoTPlatform = () => {
            Para="Unify your connected devices with expert-driven IoT solutions, We help convert complex device interactions into clear, impactful insights that maximize business potential through optimized operations, sustainable growth, and transformative opportunities in the evolving digital landscape."
          />
          <Link to="/contact" className='flex py-2 px-4  gap-2 text-[#FFFFFF] bg-[#1B1B1D] w-fit justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
-             <h4>Connect with Our IoT Expert.</h4>
+             <h4 className='xl:text-lg lg:text-base'>Connect with Our IoT Expert.</h4>
              <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>
                  <img src={Arrow} className='group-hover:hidden'/>
                   <img src={Arrowright} className=' hidden group-hover:block'/>               

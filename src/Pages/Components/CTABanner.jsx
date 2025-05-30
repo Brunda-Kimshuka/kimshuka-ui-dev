@@ -6,10 +6,10 @@ import style from './udg-style.module.css'
 const CTABanner = () => {
   return (
     <div className='py-[10%] w-full  bg-[#E9E9E9] space-y-4 rounded-2xl flex flex-col items-center justify-center border-gray-300 border-1 my-8'>
-            <h1 className={`${style['PrimaryFont']} xl:text-[48px] lg:text-[44px] text-[#0A0A0A] font-medium `}>Let's Talk About Your Next Big Move</h1>
-            <h4 className={`${style['SecondaryFont']} xl:text-[24px] lg:text-[20px] text-[#667085] font-normal`}>Big plans? Let's bring them to life together</h4>
+            <h1 className={`${style['PrimaryFont']} 2xl:text-[48px] xl:text-[44px] lg:text-[40px] text-[#0A0A0A] font-medium `}>Let's Talk About Your Next Big Move</h1>
+            <h4 className={`${style['SecondaryFont']} 2xl:text-[24px] xl:text-[20px] lg:text-[16px] text-[#667085] font-normal`}>Big plans? Let's bring them to life together</h4>
             <div className='w-full flex justify-center mt-4'>
-            <button className='relative group text-[#FFFFFF] bg-[#1B1B1D] hover:bg-[#F27F0C] px-4 py-2 flex  rounded-full items-center justify-center gap-2'>Get In Touch
+            <button className='relative group text-[#FFFFFF] bg-[#1B1B1D] hover:bg-[#F27F0C] px-4 py-2 2xl:text-lg xl:text-base lg:text-sm flex  rounded-full items-center justify-center gap-2'>Get In Touch
                 <div className=' bg-[#F27F0C] p-1 rounded-full w-8 h-8 justify-center items-center'>
                     <img src={Arrow} className='group-hover:hidden'/>
                     <img src={Arrowright} className=' hidden group-hover:block'/>

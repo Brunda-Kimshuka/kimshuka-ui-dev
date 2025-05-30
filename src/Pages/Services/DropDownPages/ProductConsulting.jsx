@@ -45,7 +45,7 @@ const ProductConsulting = () => {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" >
       <div className="flex w-full h-screen px-[80px] py-[100px] gap-4">
        <div className="h-[490px] w-[40%] flex flex-col flex-shrink-0">
          <ServiceHdng
@@ -54,7 +54,7 @@ const ProductConsulting = () => {
            Para="Turn your bold ideas into   reality. Our expert Product   Management as a Service (PMaaS)   adopts agile approach and helps you   refine, strategize and launch   user-focused digital products with  confidence."
          />
           <Link to="/contact" className='flex py-2 px-4  gap-2 text-[#FFFFFF] bg-[#1B1B1D] w-fit justify-center items-center  rounded-full group hover:bg-[#F27F0C]'>
-             <h4>Talk to a Product Consultant</h4>
+             <h4 className='xl:text-lg lg:text-base'>Talk to a Product Consultant</h4>
              <div className='bg-[#F27F0C] p-1 rounded-full w-6 h-6 justify-center items-center'>
                  <img src={Arrow} className='group-hover:hidden'/>
                   <img src={Arrowright} className=' hidden group-hover:block'/>               
