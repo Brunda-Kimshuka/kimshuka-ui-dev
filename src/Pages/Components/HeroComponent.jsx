@@ -18,29 +18,29 @@ const HeroComponent = () => {
   
   return (
     
-    <div className='w-full h-full justify-center items-center text-center pt-[5%] pb-[12%] relative'   
+    <div className='w-full h-full justify-center items-center text-center md:pt-[5%] md:pb-[12%] max-sm:px-4 relative'   
     style={{
     backgroundImage: `url(${BgImg})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   }}>
-    <div className='absolute top-[15%] left-[12%] '>
+    <div className='absolute top-[15%] left-[12%] md:block max-sm:hidden'>
     <div className=' py-2 px-4 rounded-full bg-[#0BF480]'><p className='xl:text-2xl lg:text-xl'>Business-First</p></div>
     <img src={CursorGrn} className='right-[-15%] top-[60%] absolute'/>
     </div>
 
-    <div className='absolute top-[10%] right-[12%]'>
+    <div className='absolute top-[10%] right-[12%] md:block max-sm:hidden'>
     <div className=' py-2 px-4 rounded-full bg-[#FEE4AA] '><p className='xl:text-2xl lg:text-xl'> Collabrative Model</p></div>
         <img src={CursorLOrg} className='left-[-8%] top-[45%] absolute'/>
     </div>
 
-    <div className='absolute bottom-[15%] right-[12%]'>
+    <div className='absolute bottom-[15%] right-[12%] md:block max-sm:hidden'>
     <div className=' py-2 px-4 rounded-full bg-[#B2FFD7]'><p className='xl:text-2xl lg:text-xl'>Result-Orirnted</p></div>
         <img src={CursorLgrn} className='left-[-15%] top-[-40%] absolute'/>
     </div>
 
-    <div className='absolute bottom-[10%] left-[12%]'>
+    <div className='absolute bottom-[10%] left-[12%] md:block max-sm:hidden'>
     <div className=' py-2 px-4 rounded-full bg-[#F27F0C]'><p className='xl:text-2xl lg:text-xl'>Proven Delivery</p></div>
         <img src={CursorOrg} className='right-[-10%] top-[-50%] absolute'/>
     </div>

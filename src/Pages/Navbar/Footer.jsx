@@ -114,7 +114,7 @@ const Footer = () => {
             </div>        
       </div>  
       </div>
-      <hr class="h-[2px] border-0 bg-gradient-to-r from-[#1A1A1A80] via-[#494949] to-[#1A1A1A80] my-2 "/>
+      <hr className="h-[2px] border-0 bg-gradient-to-r from-[#1A1A1A80] via-[#494949] to-[#1A1A1A80] my-2 "/>
 
     <div className=' w-full flex flex-col'>
       <h2 className="2xl:text-[6rem]  xl:text-[4.5rem] lg:text-[4rem] text-center font-normal bg-gradient-to-b from-[#a4a3a3] to-[#50505080] bg-clip-text text-transparent">
