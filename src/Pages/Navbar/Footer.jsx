@@ -67,6 +67,7 @@ const Footer = ({ onSelectService, activeService }) => {
                   className="flex flex-col 2xl:gap-6 xl:gap-4"
                 >
                   {SERVICES_CONFIG.map((service) => (
+                    <div>
                     <li
                       key={service.id}
                       value={service.id}
@@ -74,6 +75,7 @@ const Footer = ({ onSelectService, activeService }) => {
                     >
                       {service.name}
                     </li>
+                    </div>
                   ))}
                 </ul>
               </div>
